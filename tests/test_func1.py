@@ -17,6 +17,6 @@ def __yield():
 
 def test_func1_index(__yield):
     target = __yield["module"]
-    res = target.handler()
+    res = target.handler({"event": "event1"}, "context1")
     print(f"{res=}")
     assert True
